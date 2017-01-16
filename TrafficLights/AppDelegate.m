@@ -2,8 +2,8 @@
 //  AppDelegate.m
 //  TrafficLights
 //
-//  Created by Aaron on 18/08/2016.
-//  Copyright © 2016 Aaron. All rights reserved.
+//  Created by Ioannis Daratzikis on 10/01/2017.
+//  Copyright © 2017 Ioannis Daratzikis. All rights reserved.
 //
 
 #import "AppDelegate.h"

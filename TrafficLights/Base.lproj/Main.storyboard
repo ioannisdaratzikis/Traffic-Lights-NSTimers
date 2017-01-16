@@ -1,14 +1,17 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11185.3" systemVersion="16A294a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11151.4"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +19,64 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Road" translatesAutoresizingMaskIntoConstraints="NO" id="c4b-wA-LFq"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TrafficLight" translatesAutoresizingMaskIntoConstraints="NO" id="gMS-EP-eTO"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ryr-Lf-oLD">
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ryr-Lf-oLD" secondAttribute="height" multiplier="1:1" id="NRd-Ku-X89"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="35"/>
+                                <state key="normal" title="Start" backgroundImage="redButton">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startStop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q3d-B1-J9G"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJX-7K-hDK">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="CoV-ln-V7i"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="c4b-wA-LFq" secondAttribute="bottom" id="1Ch-k7-dZ8"/>
+                            <constraint firstItem="Ryr-Lf-oLD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="61" id="3dA-T5-3qH"/>
+                            <constraint firstItem="c4b-wA-LFq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="45P-WS-av3"/>
+                            <constraint firstItem="gMS-EP-eTO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="49I-t2-pha"/>
+                            <constraint firstItem="gMS-EP-eTO" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Gb4-XZ-mX9"/>
+                            <constraint firstAttribute="trailing" secondItem="c4b-wA-LFq" secondAttribute="trailing" id="QWu-F2-yc3"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ryr-Lf-oLD" secondAttribute="bottom" constant="20" id="Rdk-3B-ufL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ryr-Lf-oLD" secondAttribute="trailing" constant="62" id="UCP-VE-xbM"/>
+                            <constraint firstItem="c4b-wA-LFq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="c01-LX-bvG"/>
+                            <constraint firstItem="IJX-7K-hDK" firstAttribute="top" secondItem="gMS-EP-eTO" secondAttribute="bottom" constant="8" id="fal-Fa-9AN"/>
+                            <constraint firstItem="Ryr-Lf-oLD" firstAttribute="top" secondItem="IJX-7K-hDK" secondAttribute="bottom" constant="8" id="jMu-L5-K3k"/>
+                            <constraint firstItem="IJX-7K-hDK" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="lJX-eR-uqO"/>
+                            <constraint firstItem="gMS-EP-eTO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="pCI-dP-5Kc"/>
+                            <constraint firstItem="IJX-7K-hDK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="zY8-ps-jdk"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scoreLabel" destination="IJX-7K-hDK" id="6dd-gE-m0B"/>
+                        <outlet property="startButton" destination="Ryr-Lf-oLD" id="bty-ze-hnx"/>
+                        <outlet property="trafficLight" destination="gMS-EP-eTO" id="5Ys-zh-3Bm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="127.2" y="101.19940029985008"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Road" width="1674" height="1902"/>
+        <image name="TrafficLight" width="550" height="900"/>
+        <image name="redButton" width="1353" height="1353"/>
+    </resources>
 </document>
